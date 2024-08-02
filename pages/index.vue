@@ -1,9 +1,12 @@
 <template>
-  <Navbar />
+  <div >
     <Hello/>
+
+
+  </div>
     <Products />
 </template>
 
 <script>
-export default {}
+
 </script>

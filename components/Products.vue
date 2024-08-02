@@ -39,11 +39,11 @@ onMounted(fetchProducts)
       <div v-if="error" class="alert alert-danger col-12">{{ error }}</div>
 
       <div v-if="!loading && !error" class="col-md-3 mb-4" v-for="product in products" :key="product.id">
-        <div class="card">
+        <div class="card p-1">
           <img :src="product.image" class="card-img-top" height="250" width="250" alt="Product Image">
           <div class="card-body">
-            <h5 class="card-title">{{ product.title }}</h5>
-            <p class="card-text">{{ product.description }}</p>
+            <h5 class="card-title text-truncate">{{ product.title }}</h5>
+            <p class="card-text text-truncate">{{ product.description }}</p>
             <p class="card-text"><strong>${{ product.price }}</strong></p>
           </div>
         </div>
