@@ -26,7 +26,7 @@ onMounted(fetchProducts)
   <div class="container my-4">
     <h1 class="mb-4">Products</h1>
     <div class="row">
-      <div v-if="!loading" class="col-md-3 mb-4" v-for="n in 20" :key="n">
+      <div v-if="loading" class="col-md-3 mb-4" v-for="n in 20" :key="n">
         <div class="card" aria-hidden="true">
           <div class="card-img-top bg-light p-5"></div>
           <div class="card-body">
@@ -50,7 +50,7 @@ onMounted(fetchProducts)
 
       <div v-if="error" class="alert alert-danger col-12">{{ error }}</div>
 
-      <div v-if="loading && !error" class="col-md-3 mb-4" v-for="product in products" :key="product.id">
+      <div v-if="!loading && !error" class="col-md-3 mb-4" v-for="product in products" :key="product.id">
         <div class="card p-1">
           <img :src="product.image" class="card-img-top" height="250" width="250" alt="Product Image">
           <div class="card-body">
